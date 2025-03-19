@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal Rasmi JPKK Betong/Belukar Bukit</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            text-align: center;
+        }
+        header {
+            background: #0275d8;
+            color: white;
+            padding: 20px;
+            font-size: 24px;
+        }
+        nav {
+            background: #333;
+            padding: 10px;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 15px;
+            display: inline-block;
+        }
+        .container {
+            padding: 20px;
+        }
+        .news-section {
+            background: white;
+            padding: 20px;
+            margin: 20px auto;
+            width: 80%;
+            box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+            border-radius: 5px;
+        }
+        .news-item {
+            border-bottom: 1px solid #ddd;
+            padding: 10px 0;
+        }
+        .news-item:last-child {
+            border-bottom: none;
+        }
+        footer {
+            background: #0275d8;
+            color: white;
+            padding: 10px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+        .logo {
+            max-width: 200px;
+            margin-top: 20px;
+        }
+    </style>
+    <script>
+        function loadNews() {
+            const newsSection = document.getElementById('news');
+            const newsData = [
+                { title: 'Mesyuarat JPKK Baharu', date: '20 Mac 2025', content: 'Mesyuarat JPKK akan diadakan pada 25 Mac 2025 bertempat di Dewan Komuniti.' },
+                { title: 'Gotong-royong Kampung', date: '18 Mac 2025', content: 'Aktiviti gotong-royong akan diadakan pada 22 Mac 2025 di sekitar kampung untuk kebersihan.' }
+            ];
+            newsData.forEach(news => {
+                const newsItem = document.createElement('div');
+                newsItem.classList.add('news-item');
+                newsItem.innerHTML = `<h3>${news.title}</h3><small>${news.date}</small><p>${news.content}</p>`;
+                newsSection.appendChild(newsItem);
+            });
+        }
+        window.onload = loadNews;
+    </script>
+</head>
+<body>
+    <header>
+        <img src="jpkk-1.jpg" alt="Logo JPKK" class="logo">
+        <br>
+        Portal Rasmi JPKK Betong/Belukar Bukit
+    </header>
+    <nav>
+        <a href="#">Utama</a>
+        <a href="#">Profil</a>
+        <a href="#">Berita</a>
+        <a href="#">Hubungi</a>
+    </nav>
+    <div class="container">
+        <h2>Selamat Datang ke Portal Rasmi JPKK Betong/Belukar Bukit</h2>
+        <p>Maklumat terkini dan perkhidmatan berkaitan komuniti di sini.</p>
+    </div>
+    <div class="news-section">
+        <h2>Berita Terkini</h2>
+        <div id="news"></div>
+    </div>
+    <footer>
+        &copy; 2025 JPKK Betong/Belukar Bukit
+    </footer>
+</body>
+</html>
